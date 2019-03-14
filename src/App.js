@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './App.css';
+import Dashboard from './Components/Dashboard'
+import GamePage from './Components/GamePage'
+import GameSetUpPage from './Components/GameSetUpPage'
+import LandingPage from './Components/LandingPage'
+import NotFoundPage from './Components/NotFoundPage'
 
 class App extends Component {
+  
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>Math Monsters</h1>
+          <BrowserRouter>
+          <Switch>
+            <Route path="/" exact={true} component={LandingPage}/>
+            <Route path="/dashboard" component={Dashboard}/>
+            <Route path="/game" component={GamePage}/>
+            <Route path="/gamesetup" component={GameSetUpPage}/>
+            <Route component={NotFoundPage}/>
+          </Switch>
+          </BrowserRouter>
+         
         </header>
       </div>
     );
