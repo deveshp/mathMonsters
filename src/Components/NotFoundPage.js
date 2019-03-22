@@ -5,7 +5,7 @@ const NotFoundPage = () => (
     <div>
     <p>404 Error</p>
     <p>Page Not Found</p>
-    <Link to="/">Go to Home Page</Link>
+    <Link to="/">Go to Landing Page</Link>
     </div>
 )
 export default NotFoundPage

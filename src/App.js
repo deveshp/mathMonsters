@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import './App.css';
 import Dashboard from './Components/Dashboard'
 import GamePage from './Components/GamePage'
-import GameSetUpPage from './Components/GameSetUpPage'
+import GameSetupPage from './Components/GameSetupPage'
 import LandingPage from './Components/LandingPage'
 import NotFoundPage from './Components/NotFoundPage'
 
@@ -19,7 +19,7 @@ class App extends Component {
             <Route path="/" exact={true} component={LandingPage}/>
             <Route path="/dashboard" component={Dashboard}/>
             <Route path="/game" component={GamePage}/>
-            <Route path="/gamesetup" component={GameSetUpPage}/>
+            <Route path="/gamesetup" component={GameSetupPage}/>
             <Route component={NotFoundPage}/>
           </Switch>
           </BrowserRouter>
