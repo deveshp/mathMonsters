@@ -8,12 +8,11 @@ import LandingPage from './Components/LandingPage'
 import NotFoundPage from './Components/NotFoundPage'
 
 class App extends Component {
-  
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Math Monsters</h1>
           <BrowserRouter>
           <Switch>
             <Route path="/" exact={true} component={LandingPage}/>
@@ -23,7 +22,7 @@ class App extends Component {
             <Route component={NotFoundPage}/>
           </Switch>
           </BrowserRouter>
-         
+
         </header>
       </div>
     );
