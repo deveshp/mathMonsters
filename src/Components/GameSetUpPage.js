@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-const GameSetupPage = () =>
+const GameSetupPage = () => <p>This is the game setup page</p>;
 
-(<p>This is the game setup page</p>)
-
-export default GameSetupPage
+export default GameSetupPage;
