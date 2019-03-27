@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.css';
+// import './App.css';
 import configureStore from './store/configureStore';
-import Dashboard from './components/Dashboard';
+
+import * as routes from './constants/routes';
+import DashboardPage from './components/DashboardPage';
 import GamePage from './components/GamePage';
 import GameSetupPage from './components/GameSetupPage';
 import LandingPage from './components/LandingPage';
@@ -24,10 +26,14 @@ class App extends Component {
         <header className="App-header">
           <BrowserRouter>
             <Switch>
-              <Route path="/" exact={true} component={LandingPage} />
-              <Route path="/dashboard" component={Dashboard} />
-              <Route path="/game" component={GamePage} />
-              <Route path="/gamesetup" component={GameSetupPage} />
+              <Route
+                path={routes.LANDING}
+                exact={true}
+                component={LandingPage}
+              />
+              <Route path={routes.DASHBOARD} component={DashboardPage} />
+              <Route path={routes.GAME} component={GamePage} />
+              <Route path={routes.GAME_SETUP} component={GameSetupPage} />
               <Route component={NotFoundPage} />
             </Switch>
           </BrowserRouter>
