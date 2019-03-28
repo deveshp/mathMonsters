@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 import * as routes from '../constants/routes';
 import CharacterSelect from './CharacterSelect';
@@ -9,19 +9,17 @@ class GameSetupPage extends Component {
   state = {
     showCharacterSelect: true,
     character: null,
-    area: '',
+    area: null,
   };
 
   handleCharacterSelect = character => {
-    this.setState(() => ({ character }));
+    this.setState(() => ({ character: Number(character) }));
 
     this.toggleShowCharacterSelect();
   };
 
   handleAreaSelect = area => {
-    this.setState(() => ({ area }));
-
-    this.props.history.push(routes.GAME);
+    this.setState(() => ({ area: Number(area) }));
   };
 
   toggleShowCharacterSelect = () => {
@@ -41,6 +39,19 @@ class GameSetupPage extends Component {
             handleAreaSelect={this.handleAreaSelect}
             onCancel={this.toggleShowCharacterSelect}
           />
+        )}
+        {this.state.character && this.state.area && (
+          <Link
+            to={{
+              pathname: routes.GAME,
+              state: {
+                area: this.state.area,
+                character: this.state.character,
+              },
+            }}
+          >
+            Start Game
+          </Link>
         )}
       </div>
     );
