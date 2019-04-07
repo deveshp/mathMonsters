@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import * as routes from '../constants/routes';
@@ -35,5 +36,10 @@ class CharacterSelect extends Component {
     );
   }
 }
+
+CharacterSelect.propTypes = {
+  handleCharacterSelect: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+};
 
 export default withRouter(CharacterSelect);

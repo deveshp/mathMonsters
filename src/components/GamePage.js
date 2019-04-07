@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import AREAS from '../constants/areas';
 import CHARACTERS from '../constants/characters';
@@ -12,6 +13,10 @@ const GamePage = ({ location: { state } }) => {
       <p>You are {character.name}.</p>
     </div>
   );
+};
+
+GamePage.propTypes = {
+  location: PropTypes.object.isRequired,
 };
 
 export default GamePage;

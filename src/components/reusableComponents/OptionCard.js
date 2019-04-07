@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const OptionCard = ({ description, id, name, handleSelect }) => (
   <div>
@@ -13,5 +14,12 @@ const OptionCard = ({ description, id, name, handleSelect }) => (
     </div>
   </div>
 );
+
+OptionCard.propTypes = {
+  description: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  handleSelect: PropTypes.func.isRequired,
+};
 
 export default OptionCard;

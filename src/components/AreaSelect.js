@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import AREAS from '../constants/areas';
 import OptionCard from './reusableComponents/OptionCard';
@@ -27,5 +28,10 @@ class AreaSelect extends Component {
     );
   }
 }
+
+AreaSelect.propTypes = {
+  handleAreaSelect: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
+};
 
 export default AreaSelect;
