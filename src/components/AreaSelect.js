@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import AREAS from '../constants/areas';
-import OptionCard from './OptionCard';
+import OptionCard from './reusableComponents/OptionCard';
 
 class AreaSelect extends Component {
   handleAreaSelect = e => {

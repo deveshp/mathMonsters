@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 import * as routes from '../constants/routes';
 import CHARACTERS from '../constants/characters';
-import OptionCard from './OptionCard';
+import OptionCard from './reusableComponents/OptionCard';
 
 class CharacterSelect extends Component {
   handleCharacterSelect = e => {
