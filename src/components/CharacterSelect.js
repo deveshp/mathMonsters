@@ -17,9 +17,9 @@ class CharacterSelect extends Component {
 
   render() {
     return (
-      <div className="flex-col-center">
+      <div data-testid="character-select">
         <h3>Choose Your Character</h3>
-        <div className="flex-center">
+        <div>
           {CHARACTERS.map(character => (
             <OptionCard
               {...character}

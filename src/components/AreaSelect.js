@@ -11,7 +11,7 @@ class AreaSelect extends Component {
   };
   render() {
     return (
-      <div>
+      <div data-testid="area-select">
         <h3>Choose an Area</h3>
         <div>
           {AREAS.map(area => (

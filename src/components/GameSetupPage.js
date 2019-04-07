@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import * as routes from '../constants/routes';
 import CharacterSelect from './CharacterSelect';
@@ -31,7 +31,7 @@ class GameSetupPage extends Component {
   render() {
     return (
       <div>
-        <h2>New Game</h2>
+        <h2 data-testid="gameSetupTitle">New Game</h2>
         {this.state.showCharacterSelect ? (
           <CharacterSelect handleCharacterSelect={this.handleCharacterSelect} />
         ) : (
@@ -49,6 +49,7 @@ class GameSetupPage extends Component {
                 character: this.state.character,
               },
             }}
+            data-testid="start-game-link"
           >
             Start Game
           </Link>
@@ -58,4 +59,4 @@ class GameSetupPage extends Component {
   }
 }
 
-export default withRouter(GameSetupPage);
+export default GameSetupPage;
