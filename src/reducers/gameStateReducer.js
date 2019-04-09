@@ -5,7 +5,7 @@ const gameStateInitialState = {
 const gameStateReducer = (state = gameStateInitialState, action) => {
   // console.log(action);
   switch (action.type) {
-    case 'CHARACTER_CHOICE':
+    case 'SET_CHARACTER':
       return {
         ...state,
         character: action.character,

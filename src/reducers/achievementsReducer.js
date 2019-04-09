@@ -1,31 +1,16 @@
 const achievementsInitialState = {
-  additionWorldComplete: false,
-  subtractionWorldComplete: false,
-  multiplicationWorldComplete: false,
-  divisionWorldComplete: false,
+  additionAreaComplete: false,
+  subtractionAreaComplete: false,
+  multiplicationAreaComplete: false,
+  divisionAreaComplete: false,
 };
 
 const achievementsReducer = (state = achievementsInitialState, action) => {
   switch (action.type) {
-    case 'ADDITION_COMPLETE':
+    case 'UPDATE_AREA_COMPLETE':
       return {
         ...state,
-        additionWorldComplete: action.complete,
-      };
-    case 'SUBTRACTION_COMPLETE':
-      return {
-        ...state,
-        subtractionWorldComplete: action.complete,
-      };
-    case 'MULTIPLICATION_COMPLETE':
-      return {
-        ...state,
-        multiplicationWorldComplete: action.complete,
-      };
-    case 'DIVISION_COMPLETE':
-      return {
-        ...state,
-        divisionWorldComplete: action.complete,
+        [`${action.payload.area}AreaComplete`]: action.payload.complete,
       };
     default:
       return state;

@@ -7,13 +7,7 @@ import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 
 // I assume we won't need these for production, so I will put them here for removal later.
-import {
-  additionComplete,
-  subtractionComplete,
-  multiplicationComplete,
-  divisionComplete,
-} from './actions/achievementsActions';
-import { characterChoice } from './actions/gameStateActions';
+import { updateAreaComplete } from './actions/achievementsActions';
 
 const store = configureStore();
 
@@ -21,17 +15,16 @@ store.subscribe(() => {
   // console.log(store.getState());
 });
 
-store.dispatch(additionComplete(true));
-store.dispatch(additionComplete(false));
-store.dispatch(subtractionComplete(true));
-store.dispatch(multiplicationComplete(true));
-store.dispatch(divisionComplete(true));
-store.dispatch(characterChoice(1));
+store.dispatch(updateAreaComplete('addition', true));
+// store.dispatch(updateAreaComplete('subtraction', true));
+// store.dispatch(updateAreaComplete('multiplication', true));
+// store.dispatch(updateAreaComplete('division', true));
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
+  // eslint-disable-next-line no-undef
   document.getElementById('root')
 );
 
