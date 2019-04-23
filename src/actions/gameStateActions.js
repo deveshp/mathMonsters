@@ -1,6 +1,6 @@
-export const characterChoice = character => {
+export const setCharacter = character => {
   return {
-    type: 'CHARACTER_CHOICE',
+    type: 'SET_CHARACTER',
     character,
   };
 };
