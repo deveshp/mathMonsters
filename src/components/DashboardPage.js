@@ -4,7 +4,7 @@ import * as routes from '../constants/routes';
 // import { connect } from 'tls';
 
 const DashboardPage = (props) => {
-  console.log(props.achievements);
+  console.log(props);
   return (
     <div>
       <h2 data-testid="dashboard-title">My World</h2>
@@ -23,6 +23,7 @@ const DashboardPage = (props) => {
 const mapStateToProps = (state) => {
   // Ruan, you need to still wire this up better.
   return {
+    character: state.character,
     achievements: state.achievements
   };
 };

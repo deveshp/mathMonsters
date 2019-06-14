@@ -7,6 +7,7 @@ import CHARACTERS from '../constants/characters';
 import { updateAreaComplete } from '../actions/achievementsActions';
 
 const GamePage = (props) => {
+  console.log(props);
   const state = props.location.state;
   const character = CHARACTERS.find(char => char.id === state.character);
   const area = AREAS.find(ar => ar.id === state.area);
@@ -20,6 +21,8 @@ const GamePage = (props) => {
     } else if (area === 4) {
       props.dispatch(updateAreaComplete('division', true));
     }
+    props.history.push('/game_setup');
+
   };
 
   return (

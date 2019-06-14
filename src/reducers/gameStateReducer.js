@@ -1,5 +1,5 @@
 const gameStateInitialState = {
-  character: 0,
+  character: undefined,
 };
 
 const gameStateReducer = (state = gameStateInitialState, action) => {

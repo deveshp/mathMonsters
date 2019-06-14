@@ -16,6 +16,8 @@ store.subscribe(() => {
   console.log(store.getState());
 });
 
+console.log(store.getState());
+
 // store.dispatch(updateAreaComplete('addition', true));
 // store.dispatch(updateAreaComplete('subtraction', true));
 // store.dispatch(updateAreaComplete('multiplication', true));

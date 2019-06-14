@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { setCharacter } from '../actions/gameStateActions.js';
 
 import * as routes from '../constants/routes';
 import CharacterSelect from './CharacterSelect';
@@ -7,15 +9,15 @@ import AreaSelect from './AreaSelect';
 
 class GameSetupPage extends Component {
   state = {
-    showCharacterSelect: true,
-    character: null,
+    showCharacterSelect: this.props.gameState.character !== undefined ? false : true,
+    character: this.props.gameState.character == undefined ? null : this.props.gameState.character,
     area: null,
   };
 
   handleCharacterSelect = character => {
     this.setState(() => ({ character: Number(character) }));
-
     this.toggleShowCharacterSelect();
+    this.props.dispatch(setCharacter(Number(character)));
   };
 
   handleAreaSelect = area => {
@@ -59,4 +61,10 @@ class GameSetupPage extends Component {
   }
 }
 
-export default GameSetupPage;
+const mapStateToProps = (state, props) => {
+  return {
+    ...state
+  }
+} 
+
+export default connect(mapStateToProps)(GameSetupPage);
