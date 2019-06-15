@@ -10,7 +10,7 @@ import AreaSelect from './AreaSelect';
 class GameSetupPage extends Component {
   state = {
     showCharacterSelect: this.props.gameState.character !== undefined ? false : true,
-    character: this.props.gameState.character == undefined ? null : this.props.gameState.character,
+    character: this.props.gameState.character === undefined ? null : this.props.gameState.character,
     area: null,
   };
 

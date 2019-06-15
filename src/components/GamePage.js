@@ -22,7 +22,6 @@ const GamePage = (props) => {
       props.dispatch(updateAreaComplete('division', true));
     }
     props.history.push('/game_setup');
-
   };
 
   return (
@@ -38,4 +37,10 @@ GamePage.propTypes = {
   location: PropTypes.object.isRequired,
 };
 
-export default connect()(GamePage);
+const mapStateToProps = (state, props) => {
+  return {
+    ...state
+  }
+};
+
+export default connect(mapStateToProps)(GamePage);

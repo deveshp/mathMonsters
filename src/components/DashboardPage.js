@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as routes from '../constants/routes';
 // import { connect } from 'tls';
 
@@ -13,9 +14,9 @@ const DashboardPage = (props) => {
         {props.achievements.subtractionAreaComplete && <p>Subtraction Area Complete</p>}
         {props.achievements.multiplicationAreaComplete && <p>Multiplication Area Complete</p>}
         {props.achievements.divisionAreaComplete && <p>Division Area Complete</p>}
-      <a href={routes.GAME_SETUP} data-testid="new-game-link">
+      <Link to={routes.GAME_SETUP} data-testid="new-game-link">
         Start a new game
-      </a>
+      </Link>
     </div>
   )
 };

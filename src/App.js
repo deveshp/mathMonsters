@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React/*, { Component }*/ from 'react';
+import { /*BrowserRouter, */Route, Switch } from 'react-router-dom';
 import './App.css';
   // Emma requested that we create a separate branch for the css, which makes sense.
 // import './App.css'; 
