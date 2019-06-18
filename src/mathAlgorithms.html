@@ -1,0 +1,232 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+
+        #timeOutBar {
+            width: 50px;
+            height: 150px;
+            border: 1px transparent black;
+            display: block;
+            background-color: green;
+        }
+
+        #timeOutBorder {
+            border: 2px solid black;
+            width: 50px;
+            height: 150px;
+        }
+
+        #healthBar {
+            width: 200px;
+            height: 40px;
+            background-color: red;
+            border: 1px transparent black;
+            display: inline-block;
+        }
+
+        #healthBarBorder {
+            border: 2px solid black;
+            width: 200px;
+            height: 40px;
+        }
+
+        #monsterHealthBar {
+            width: 400px;
+            height: 40px;
+            background-color: violet;
+            border: 1px transparent black;
+            display: inline-block;
+        }
+
+        #monsterHealthBarBorder {
+            border: 2px solid black;
+            width: 400px;
+            height: 40px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <p id='beginQuestion'>Click here to begin the test.</p>
+
+
+    <p id='questionText'>Question text goes here.</p>
+    <input id='answer'>
+    <button id='submit'>submitButton</button>
+
+    <p>Health:</p>
+
+    <div id="healthBarBorder">
+        <div id="healthBar">
+            <p id="healthCount">20</p>
+        </div>
+    </div>
+
+    <p>Enemy's health:</p>
+    <div id="monsterHealthBarBorder">
+        <div id="monsterHealthBar">
+            <p id="monsterHealthCount">10</p>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="timeOutBorder">
+        <div id="timeOutBar"></div>
+    </div>
+
+    <script>
+
+        
+        let store = {
+            character: 'girl', // 'boy' and 'girl' are the options.
+            worldsComplete: {
+                addition: false, 
+                subtraction: false, 
+                multiplication: false,
+                division: false
+            }
+        };
+
+        // The following variables must be supplied by the page: 
+        var monsterLevel = 'medium'; // 'easy,' 'medium', or 'hard'. 'hard' is for the boss. 
+ 
+        var operation = 'addition'; // multiplication, division, addition, subtraction;
+
+        var x;
+        var y;
+        var k; 
+        var timeOutBarHeight = $('#timeOutBar').css('height');
+        var playerHealth = 20;
+        var monsterHealth;
+        var time;
+        var questionCheck;
+        if (operation == 'division') {
+            if (monsterLevel == 'easy') {
+                monsterHealth = 35;
+                time = 14; 
+            } else if (monsterLevel == 'medium') {
+                monsterHealth = 50;
+                time = 12;
+            } else {
+                monsterHealth = 80;
+                time = 9;
+            }
+        } else {
+            if (monsterLevel == 'easy') {
+                monsterHealth = 40;
+                time = 15; 
+            } else if (monsterLevel == 'medium') {
+                monsterHealth = 60;
+                time = 12;
+            } else {
+                monsterHealth = 100;
+                time = 7;
+            }
+        };
+
+        document.getElementById('monsterHealthCount').innerText = monsterHealth;
+
+        var monsterHealthOriginal = monsterHealth;
+        var playerHealthBarWidthOriginal = $('#healthBar').css('width');
+        var monsterHealthBarWidthOriginal = $('#monsterHealthBar').css('width');
+        console.log(monsterHealthBarWidthOriginal);
+        var firstAttempt = true;
+
+        document.getElementById('beginQuestion').onclick = function() {
+            beginQuestion();
+        };
+
+        function beginQuestion() {
+            if (operation == 'multiplication') {
+                x = (Math.floor((Math.random() * 12) + 1));
+                y = (Math.floor((Math.random() * 12) + 1));
+                document.getElementById('questionText').innerHTML = 'What is '+ x + ' x ' + y + '?';
+            } else if (operation == 'addition') {
+                x = (Math.floor((Math.random() * -12) + 1));
+                y = (Math.floor((Math.random() * -12) + 1));
+                document.getElementById('questionText').innerHTML = 'What is '+ x + ' ' + y + '?';
+            } else if (operation == 'division') {
+                k = (Math.floor((Math.random() * 12) + 1));
+                y = (Math.floor((Math.random() * 12) + 1));
+                x = k * y;
+                document.getElementById('questionText').innerHTML = 'What is '+ x + ' / ' + y + '?';
+            };
+            startCountDown();
+        };
+
+        function startCountDown() {
+            $('#timeOutBar').stop();
+            $('#timeOutBar').css('height', timeOutBarHeight);
+            $('#timeOutBar').animate({height:'0px'}, (time * 1000), function(){
+                if (firstAttempt == true) {
+                    playerHealthDecrease();
+                }
+                firstAttempt = false;
+            });
+        };
+
+        document.getElementById('submit').onclick = function() {
+            checkQuestion();
+        };
+
+        function playerHealthDecrease() {
+            playerHealth--;
+            document.getElementById('healthCount').innerHTML = playerHealth;
+            document.getElementById('healthBar').style.width = playerHealth / 20 * parseInt(playerHealthBarWidthOriginal,10);
+        };
+
+        function monsterHealthDecrease() {
+            monsterHealth--;
+            document.getElementById('monsterHealthCount').innerHTML = monsterHealth;
+            document.getElementById('monsterHealthBar').style.width = monsterHealth / monsterHealthOriginal * parseInt(monsterHealthBarWidthOriginal,10);
+        };
+
+        function checkQuestion() {
+            var z = document.getElementById('answer').value;
+
+            if (operation == 'multiplication' && z == x * y) {
+                questionCheck = true;
+            } else if (operation == 'addition' && z == x + y) {
+                questionCheck = true;
+            } else if (operation == 'subtraction' && z == x - y) {
+                questionCheck = true;
+            } else if (operation == 'division' && z == x / y) { 
+                questionCheck = true;
+            } else {
+                questionCheck = false;
+            };
+            if (questionCheck == true) {
+                if (firstAttempt == true) {
+                    monsterHealthDecrease();
+                };
+                firstAttempt = true;
+                beginQuestion();
+                clearText();
+                return true;
+            } else {
+                if (firstAttempt == true){
+                    playerHealthDecrease();
+                };
+                firstAttempt = false;
+                clearText();
+                return false;
+            };
+        };
+
+        function clearText() {
+            document.getElementById('answer').value = '';
+        };
+
+        document.getElementById("answer").addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode == 13) {
+                document.getElementById("submit").click();
+            }});
+    
+    </script>
+
+</body>
+</html>
