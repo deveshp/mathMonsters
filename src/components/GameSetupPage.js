@@ -49,6 +49,7 @@ class GameSetupPage extends Component {
               state: {
                 area: this.state.area,
                 character: this.state.character,
+                something: 'something'
               },
             }}
             data-testid="start-game-link"

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import * as routes from '../constants/routes';
 import CHARACTERS from '../constants/characters';
@@ -9,7 +10,6 @@ import OptionCard from './reusableComponents/OptionCard';
 class CharacterSelect extends Component {
   handleCharacterSelect = e => {
     const { value } = e.target;
-
     this.props.handleCharacterSelect(value);
   };
   onExit = () => {
@@ -42,4 +42,4 @@ CharacterSelect.propTypes = {
   history: PropTypes.object.isRequired,
 };
 
-export default withRouter(CharacterSelect);
+export default connect()(withRouter(CharacterSelect));

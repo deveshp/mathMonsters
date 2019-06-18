@@ -1,8 +1,8 @@
-import React, { Component, setState } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import '../styles/gamePage.css';
-import { additionFunction } from '../constants/operations.js';
+import { operation } from '../constants/operations.js';
 
 import AREAS from '../constants/areas';
 //import CHARACTERS from '../constants/characters';
@@ -14,7 +14,7 @@ class GamePage extends Component {
     this.state = {
       area: AREAS.find(ar => ar.id === this.props.location.state.area),
       math: {
-        ...additionFunction(),
+        ...operation(this.props.location.state.area),
         userInput: ''
       }
     }
@@ -25,7 +25,6 @@ class GamePage extends Component {
   textInputChange(event) {
     event.persist();
     event.preventDefault();
-    console.log(event.target.value);
     this.setState(() => ({
       math: {
         ...this.state.math,
@@ -39,7 +38,7 @@ class GamePage extends Component {
     if (Number(this.state.math.userInput) === this.state.math.correctResult) {
       this.setState(() => ({
         math: {
-          ...additionFunction(),
+          ...operation(this.props.location.state.area),
           userInput: ''
         }
       }))
@@ -49,11 +48,15 @@ class GamePage extends Component {
       //       console.log('something');
       //   }})
     } else {
-      console.log('incorrect');
+      this.setState(() => ({
+        math: {
+          ...this.state.math,
+          userInput: ''
+        }
+      }))
     }
   }
   render() {
-    console.log('state', this.state);
     const areaComplete = (area) => {
       if (area === 1 ) {
         this.props.dispatch(updateAreaComplete('addition', true));
