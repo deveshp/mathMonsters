@@ -30,7 +30,7 @@ const divisionFunction = () => {
     let varTwo = (Math.floor((Math.random() * 12) + 1));
     return {
         correctResult: varOne, 
-        questionText: `What is ${varOne * varTwo} / ${varTwo}?`
+        questionText: `What is ${varOne * varTwo} ÷ ${varTwo}?`
     }
 }
 
