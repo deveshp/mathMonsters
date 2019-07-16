@@ -17,6 +17,7 @@ class GamePage extends Component {
         ...operation(this.props.location.state.area),
         userInput: ''
       },
+      difficulty: 'easy',
       attempted: false,
       correct: 0,
       incorrect: 0,
@@ -88,14 +89,22 @@ class GamePage extends Component {
       }
     }
   }
+  clearSetTimeout() {
+    clearTimeout(this.timeOutCount);
+    this.timeOutCount = setTimeout(() => this.setState(() => ({
+      attempted: true,
+      incorrect: this.state.attempted === false ? this.state.incorrect + 1: this.state.incorrect
+    })), this.state.math.seconds * 1000);
+  }
 
   async submitAnswer (event) {
     event.preventDefault();
     if (Number(this.state.math.userInput) === this.state.math.correctResult) {
+      this.clearSetTimeout();
       await this.setState(() => ({
         CSStimeState: this.state.started === false ? 'during' : 'reset',
         math: {
-          ...operation(this.props.location.state.area),
+          ...operation(this.props.location.state.area, this.state.difficulty),
           userInput: '',
         },
         started: this.state.started === false && true,
@@ -116,15 +125,48 @@ class GamePage extends Component {
     }
 
     // Win and lose conditions
-    if (this.state.incorrect === this.state.math.hitPoints) {
-      this.props.history.push('/game_setup');
+    if (this.state.incorrect === this.state.math.hitPoints) { //Lose condition
+      alert('Try again!');
+      this.setState(() => ({
+        correct: 0,
+        incorrect: 0
+      }))
     } else if (this.state.correct === this.state.math.numberOfQuestions) {
-      this.areaComplete(this.state.area.id);
+      if (this.state.difficulty === 'easy') {
+        alert('Easy level complete! Get ready for the next level!');
+        this.setState(() => ({
+          difficulty: 'medium',
+          attempted: false,
+          correct: 0,
+          incorrect: 0,
+          math: {
+            ...operation(this.props.location.state.area, 'medium'),
+            userInput: '',
+          }
+        }))
+        this.clearSetTimeout();
+      } else if (this.state.difficulty === 'medium') {
+        alert('Medium level complete! Get ready for the next level!');
+        this.setState(() => ({
+          difficulty: 'hard',
+          attempted: false,
+          correct: 0,
+          incorrect: 0, 
+          math: {
+            ...operation(this.props.location.state.area, 'hard'),
+            userInput: '',
+          }
+        }))
+        this.clearSetTimeout();
+      } else {
+        alert('Hard level complete! Go pick your next challenge!');
+        this.areaComplete(this.state.area.id);
+      }
     }
   }
 
   render() {
-    // console.log(this.state);
+    console.log(this.state);
     return (
       <div>
         <h2>{this.state.area.name}</h2>
@@ -138,6 +180,7 @@ class GamePage extends Component {
         <p>{this.state.math.seconds} seconds </p>
         <p>correct: {this.state.correct} / {this.state.math.numberOfQuestions}</p>
         <p>incorrect: {this.state.incorrect} / {this.state.math.hitPoints}</p>
+        <p>level: {this.state.difficulty}</p>
         <form onSubmit={this.submitAnswer}>
           <input type='text' value={this.state.math.userInput} onChange={this.textInputChange} />
           <button type='submit' value='submit'>submit</button>
@@ -145,7 +188,7 @@ class GamePage extends Component {
           <div id="timeOutBorder">
           <div {...this.timeoutBarCSS()} onClick={() => this.setState({toggle: !this.state.toggle})}></div>
           </div>
-          {<button onClick={() => {this.areaComplete(this.state.area.id)}}>Complete Area</button>}
+          {<button onClick={() => {this.props.history.push('/game_setup')}}>Go back</button>}
         </div>
         
       </div>

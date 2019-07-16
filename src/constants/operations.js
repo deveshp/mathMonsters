@@ -4,16 +4,16 @@ const additionFunction = (difficulty = 'easy') => {
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
         seconds = 10;
-        numberOfQuestions = 60;
-        hitPoints = 30;
+        numberOfQuestions = 3;
+        hitPoints = 3;
     } else if (difficulty === 'medium') {
-        seconds = 9;
-        numberOfQuestions = 80;
-        hitPoints = 30;
+        seconds = 6;
+        numberOfQuestions = 3;
+        hitPoints = 3;
     } else {
-        seconds = 8;
-        numberOfQuestions = 100;
-        hitPoints = 20; 
+        seconds = 4;
+        numberOfQuestions = 3;
+        hitPoints = 3; 
     }
     return {
         correctResult: varOne + varTwo,
