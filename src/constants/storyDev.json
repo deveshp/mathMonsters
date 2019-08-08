@@ -1,0 +1,68 @@
+{
+    "intro" : [
+        "You go to sleep one night…"
+    ],
+    "1" : {
+        "1" : [
+            "As you walk down the road into the forest…"
+        ],
+        "2" : [
+            "The mushroom turns around and says, “Well done! But this is only the start.”"
+        ],
+        "3" : [
+            "“Meow! I see you can paint, too! But one more buzzy challenge is waiting for you!”"
+        ],
+        "4" : [
+            "A smile slowly forms in the corner of the bug’s already tiny mouth."]
+    },
+    "2" : {
+        "1" : [
+            "As you pick the blue path, you end up on the beach at the ocean."
+        ],
+        "2" : [
+            "The fish shows even more, sharp teeth and darts away."
+            
+        ],
+        "3" : [
+            "All the octopus joyfully bop up and down around you, coaxing you to move forward."
+        ],
+        "4" : [
+            "You feel exhausted by the challenge of your scary opponent. But, as you look up, the massive creature bows with respect.",
+            "“I am very old. I’m king, but also carer and protector of this realm.”"
+        ]
+    },
+    "3" : {
+        "1" : [
+            "You pick the path that looks somewhat more stable and clean and soon find yourself in a desert."
+        ],
+        "2" : [
+            "The fluffball monster has a twinkle in his eye. “Not bad, stranger.” "
+
+            
+        ],
+        "3" : [
+            "“I give you an A+. You are worthy to meet our queen.”"
+
+        ],
+        "4" : [
+            "The queen hops to right in front of you. You wonder what she will do next."]
+    },
+    "4" : {
+        "1" : [
+            "The soil on one of the paths has a dark, reddish shine to it. You take the path, and the color only gets darker. Eventually, the path leads to the slope of a volcanic mountain."
+        ],
+        "2" : [
+            "“We see that you have some skills! Continue on the path, stranger. Stronger enemies await.”"
+            
+        ],
+        "3" : [
+            "As you defeat the giant monster, he sits quietly next to the fire. He muses, “You know, fire can hurt you or it can cook your food for you. It can help or heal, depending on how you use it.”"
+        ],
+        "4" : [
+            "“What is your name, stranger?” You tell him your name. “I will remember that name. Few make it past Drako below. Fewer skill consider his wisdom. See, it is not in knowing that we find results, but in applying, in doing. You worked hard here and deserve the reward for your labor. I think you will find out what that is soon enough.”"
+        ]
+    },
+    "conclusion" : [
+        "You have defeated all the bosses and you find yourself back at the door. You could have known that there were paths here, but they are gone. As you feel around, you notice that you have all four keys needed to open the door. You unlock each individual lock and the door opens. You peer through the door, but it doesn’t lead anywhere. All you see is the grass on the other side. "
+    ]
+}

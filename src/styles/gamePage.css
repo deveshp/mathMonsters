@@ -1,24 +1,17 @@
-#monsterPicWrapper {
+.mainGamePage {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #monsterPicWrapper {
     width: 100%
-}
+} */
 
-.monsterPicDiv {
-    width: 150px;
-    height: 150px;
-    border: 1px solid black;
-    background-color: grey;
-    margin-left: 50px;
-}
-
-.characterPicDiv {
-    width: 150px;
-    height: 150px;
-    border: 1px solid black;
-    background-color: lightskyblue;
-    margin-left: 50px;
-}
-
-#mathBox {
+#mathBox { /* To be deleted */
     border: 2px solid black;
     height: 150px;
     width: 80%;
@@ -64,12 +57,12 @@
     margin: 15px;
 }
 
-#questionText {
+#questionText { /* To be deleted */
     float: left;
     margin-left: 20px;
 }
 
-#answerInput {
+#answerInput { /* To be deleted */
     float:left;
     margin-left: 20px;
 }

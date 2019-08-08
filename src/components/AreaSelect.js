@@ -15,13 +15,29 @@ class AreaSelect extends Component {
       <div data-testid="area-select">
         <h3>Choose an Area</h3>
         <div>
-          {AREAS.map(area => (
-            <OptionCard
-              {...area}
-              handleSelect={this.handleAreaSelect}
-              key={area.id}
-            />
-          ))}
+          {AREAS.map(area => {
+            const completedCheck = () => {
+              if (area.operation === 'addition' && this.props.completedAreas.additionAreaComplete) {
+                return true;
+              } if (area.operation === 'subtraction' && this.props.completedAreas.subtractionAreaComplete) {
+                return true;
+              } if (area.operation === 'multiplication' && this.props.completedAreas.multiplicationAreaComplete) {
+                return true;
+              } else if (area.operation === 'division' && this.props.completedAreas.divisionAreaComplete) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+            return (
+              <OptionCard
+                {...area}
+                handleSelect={this.handleAreaSelect}
+                key={area.id}
+                completed={completedCheck()}
+              />
+            )
+          })}
         </div>
         <button onClick={this.props.onCancel}>Go Back</button>
       </div>

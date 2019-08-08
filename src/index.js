@@ -7,21 +7,13 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 
-// I assume we won't need these for production, so I will put them here for removal later.
-// import { updateAreaComplete } from './actions/achievementsActions';
-
 const store = configureStore();
 
 store.subscribe(() => {
-  console.log(store.getState());
+  // console.log(store.getState());
 });
 
-console.log(store.getState());
-
-// store.dispatch(updateAreaComplete('addition', true));
-// store.dispatch(updateAreaComplete('subtraction', true));
-// store.dispatch(updateAreaComplete('multiplication', true));
-// store.dispatch(updateAreaComplete('division', true));
+// console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>

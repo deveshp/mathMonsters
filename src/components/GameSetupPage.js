@@ -6,12 +6,15 @@ import { setCharacter } from '../actions/gameStateActions.js';
 import * as routes from '../constants/routes';
 import CharacterSelect from './CharacterSelect';
 import AreaSelect from './AreaSelect';
+import StoryCard from './reusableComponents/StoryCard';
 
 class GameSetupPage extends Component {
   state = {
     showCharacterSelect: this.props.gameState.character !== undefined ? false : true,
     character: this.props.gameState.character === undefined ? null : this.props.gameState.character,
     area: null,
+    showIntro: !this.props.achievements.additionAreaComplete && !this.props.achievements.subtractionAreaComplete && !this.props.achievements.multiplicationAreaComplete && !this.props.achievements.divisionAreaComplete ? true : false,
+    showFinalStory: this.props.achievements.additionAreaComplete && this.props.achievements.subtractionAreaComplete && this.props.achievements.multiplicationAreaComplete && this.props.achievements.divisionAreaComplete ? true : false,
   };
 
   handleCharacterSelect = character => {
@@ -30,14 +33,21 @@ class GameSetupPage extends Component {
     }));
   };
 
+  toggleShowIntro = () => {
+    this.setState(() => ({ showIntro: false }))
+  }
+
   render() {
     return (
       <div>
+      {this.state.showIntro && <StoryCard input={'intro'} whenDone={this.toggleShowIntro} />}
+      {this.state.showFinalStory && <StoryCard input={'conclusion'} whenDone={() => console.log('I don\'t know')} />}
         <h2 data-testid="gameSetupTitle">New Game</h2>
         {this.state.showCharacterSelect ? (
           <CharacterSelect handleCharacterSelect={this.handleCharacterSelect} />
         ) : (
           <AreaSelect
+            completedAreas={this.props.achievements}
             handleAreaSelect={this.handleAreaSelect}
             onCancel={this.toggleShowCharacterSelect}
           />
@@ -49,7 +59,6 @@ class GameSetupPage extends Component {
               state: {
                 area: this.state.area,
                 character: this.state.character,
-                something: 'something'
               },
             }}
             data-testid="start-game-link"

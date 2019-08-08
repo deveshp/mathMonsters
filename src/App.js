@@ -7,7 +7,7 @@ import './App.css';
 
 import * as routes from './constants/routes';
 import DashboardPage from './components/DashboardPage';
-import GamePage from './components/GamePage';
+import GamePage from './components/GamePage/index';
 import GameSetupPage from './components/GameSetupPage';
 import LandingPage from './components/LandingPage';
 import NotFoundPage from './components/NotFoundPage';
@@ -32,18 +32,5 @@ const App = () => (
     </Switch>
   </div>
 );
-
-// const store = configureStore();
-
-// store.subscribe(() => {
-//   // console.log(store.getState());
-// });
-
-// store.dispatch(additionComplete(true));
-// store.dispatch(additionComplete(false));
-// store.dispatch(subtractionComplete(true));
-// store.dispatch(multiplicationComplete(true));
-// store.dispatch(divisionComplete(true));
-// store.dispatch(characterChoice(1));
 
 export default App;

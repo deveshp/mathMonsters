@@ -4,16 +4,16 @@ const additionFunction = (difficulty = 'easy') => {
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
         seconds = 10;
-        numberOfQuestions = 3;
-        hitPoints = 3;
+        numberOfQuestions = 5; //60
+        hitPoints = 30;
     } else if (difficulty === 'medium') {
-        seconds = 6;
-        numberOfQuestions = 3;
-        hitPoints = 3;
+        seconds = 8;
+        numberOfQuestions = 5; //80
+        hitPoints = 24;
     } else {
-        seconds = 4;
-        numberOfQuestions = 3;
-        hitPoints = 3; 
+        seconds = 7;
+        numberOfQuestions = 5; //100
+        hitPoints = 20; 
     }
     return {
         correctResult: varOne + varTwo,
@@ -29,16 +29,16 @@ const subtractionFunction = (difficulty = 'easy') => {
     let varTwo = (Math.floor((Math.random() * 12) + 1) + varOne);
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
-        seconds = 11;
-        numberOfQuestions = 50;
+        seconds = 12;
+        numberOfQuestions = 5; //50
         hitPoints = 25;
     } else if (difficulty === 'medium') {
-        seconds = 10;
-        numberOfQuestions = 65;
+        seconds = 11;
+        numberOfQuestions = 5; //65
         hitPoints = 25;
     } else {
-        seconds = 9; 
-        numberOfQuestions = 100;
+        seconds = 10; 
+        numberOfQuestions = 5; //100 
         hitPoints = 20;
     }
     return {
@@ -56,15 +56,15 @@ const multiplicationFunction = (difficulty = 'seconds') => {
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
         seconds = 10;
-        numberOfQuestions = 60;
+        numberOfQuestions = 5; //60
         hitPoints = 30;
     } else if (difficulty === 'medium') {
         seconds = 9;
-        numberOfQuestions = 80;
-        hitPoints = 30;
+        numberOfQuestions = 5; //80
+        hitPoints = 25;
     } else {
         seconds = 8; 
-        numberOfQuestions = 100;
+        numberOfQuestions = 5; //100
         hitPoints = 20;
     }
     return {
@@ -81,16 +81,16 @@ const divisionFunction = (difficulty = 'easy') => {
     let varTwo = (Math.floor((Math.random() * 12) + 1));    
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
-        seconds = 12;
-        numberOfQuestions = 50;
+        seconds = 13;
+        numberOfQuestions = 5; //50
         hitPoints = 20;
     } else if (difficulty === 'medium') {
-        seconds = 11;
-        numberOfQuestions = 60;
+        seconds = 12;
+        numberOfQuestions = 5; //60
         hitPoints = 25
     } else {
-        seconds = 10;
-        numberOfQuestions = 80;
+        seconds = 11;
+        numberOfQuestions = 5; //80
         hitPoints = 16;
     }
     return {

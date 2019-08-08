@@ -1,0 +1,16 @@
+#mathBox {
+    border: 2px solid black;
+    height: 150px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#questionText {
+    float: left;
+    margin-left: 20px;
+}
+
+#answerInput {
+    float:left;
+    margin-left: 20px;
+}

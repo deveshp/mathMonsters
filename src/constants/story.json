@@ -1,0 +1,147 @@
+{
+    "intro" : [
+        "You go to sleep one night…",
+        "… only to wake up in a different place, as in a dream.",
+        "In front of you are four paths…",
+        "Which one will you choose?",
+        "You turn around and see a door with four locks. The locks look different, but secure. ",
+        "You somehow know you need to find the keys that fit those locks. ",
+        "Four locks. Four paths. ",
+        "Which will you choose? "
+    ],
+    "1" : {
+        "1" : [
+            "As you walk down the road into the forest…",
+            "The leaves falling from the trees are shaped as numbers!",
+            "Something moves in front of you, a wild mushroom!",
+            "“You have to beat me at addition,” the mushroom says.",
+            "You are frozen, unable to move.",
+            "But, somehow, the mushroom is able to read your thoughts and you, his!",
+            "A mental battle starts!"
+        ],
+        "2" : [
+            "The mushroom turns around and says, “Well done! But this is only the start.”",
+            "It hops away into the forest while you find yourself able to move forward.",
+            "“Oh, here you are!” You hear a faint voice on your left.",
+            "A cat-like creature was painting with numbers."
+        ],
+        "3" : [
+            "“Meow! I see you can paint, too! But one more buzzy challenge is waiting for you!”",
+            "You wonder down the path for a while longer, fascinated with the thought that this dream-world feels so real.  ",
+            "You see a bug in the distance. It looks bigger the closer you get.",
+            "“You made it this far. I’m impressed!” the bug says rather emotionlessly.",
+            "“But now, I am to you, the ultimate test.”"
+        ],
+        "4" : [
+            "A smile slowly forms in the corner of the bug’s already tiny mouth.",
+            "“I didn’t make it easy for you, but you have succeeded in winning my respect.”",
+            "“Never underestimate the power of a single worthwhile step.” He hands you a key and, in a blink of an eye, you find yourself back in the beginning of the four paths, holding the key in your hand."
+        ]
+    },
+    "2" : {
+        "1" : [
+            "As you pick the blue path, you end up on the beach at the ocean.",
+            "For some unknown reason, you walk into the water and start swimming, finding out that you can breathe underwater!",
+            "You swim forward a bit and encounter a fish.",
+            "As you look at it’s teeth, you wonder, “Is that fish smiling or threatening to bite me?”",
+            "You hear it’s thoughts, “Let’s play a game!”"
+        ],
+        "2" : [
+            "The fish shows even more, sharp teeth and darts away.",
+            "“Well, that was weird”, you think, as you swim to a colony of octopi.",
+            "“Hey, you can’t get through me without a challenge!” says the biggest of them all!"
+            
+        ],
+        "3" : [
+            "All the octopus joyfully bop up and down around you, coaxing you to move forward.",
+            "They lead you to a big, underwater castle.",
+            "The doors open by themselves and, inside, a big creature sits on the throne.",
+            "“Down below is my realm and no-one can take it away from me.”",
+            "“I reduce every opponent to second place, everyone who steps into this place!”"
+        ],
+        "4" : [
+            "You feel exhausted by the challenge of your scary opponent. But, as you look up, the massive creature bows with respect.",
+            "“I am very old. I’m king, but also carer and protector of this realm.”",
+            "“You are a worthy challenger and, as a reward, I give you not only this key, but also my age-old wise thoughts:”",
+            "“To live well, you must fight well. To fight well, you must apply your mind to problems. To apply your mind skillfully takes practice and effort. Grow this attitude if you want to be successful at anything you do.”",
+            "And with that, you suddenly fall out of the sky, onto the ground, water splashing all around you and then drying up into a vapor.",
+            "“What, where am I?” Once again, you see the paths ahead of you."
+        ]
+    },
+    "3" : {
+        "1" : [
+            "You pick the path that looks somewhat more stable and clean and soon find yourself in a desert.",
+            "In the distance, you see a fluffy ball slowly moving around.",
+            "As you walk up to it, it turns around a looks you.",
+            "It says, “What yer doin’ here?”",
+            "You try to ask it for directions and it says, “No way, I’m helping you without a fight!” ",
+            "A battle ensues."
+        ],
+        "2" : [
+            "The fluffball monster has a twinkle in his eye. “Not bad, stranger.” ",
+            "So, you want to know where to go? ",
+            "He turns around and points, “Follow those rocks.”",
+            "Then, he vanishes. ",
+            "You walk from rock to rock and finally reach a place where you can see some palm trees in the far distance. ",
+            "Suddenly, a cactus jumps in front of you. ",
+            "“I’m the knowledge-skill protector of our ferocious and powerful queen!”",
+            "“If you want to meet her, you have to go through me!” "
+
+            
+        ],
+        "3" : [
+            "“I give you an A+. You are worthy to meet our queen.”",
+            "The cactus turns around and motions you to follow.",
+            "You follow the cactus into a sculpted glass and sand castle.",
+            "The cactus leads you into a great hall and bows before his queen.",
+            "“You see us as your enemies, do you?,” the queen says.",
+            "She gracefully hops in your direction… "
+
+        ],
+        "4" : [
+            "The queen hops to right in front of you. You wonder what she will do next.",
+            "“Remember, stranger, that it is wisdom, skill and knowledge, not force, that will make a difference in the world. You clearly have what it takes. But history will tell if you were willing to do what it takes to make a difference.”",
+            "She looks you straight in the eyes, as if peering into your soul with hope, hands you a key, turns around and hops away."
+        ]
+    },
+    "4" : {
+        "1" : [
+            "The soil on one of the paths has a dark, reddish shine to it. You take the path, and the color only gets darker. Eventually, the path leads to the slope of a volcanic mountain.", 
+            "As you get to the slope, you see flames dancing around. They dart towards you.", 
+            "“Are you sure you want to come here?,” they ask while playfully dancing around.", 
+            "“Let’s test your mettle.”"
+        ],
+        "2" : [
+            "“We see that you have some skills! Continue on the path, stranger. Stronger enemies await.”",
+            "As you walk, the slope gets steeper and you eventually reach the entrance of a cave.",
+            "You hear a sniff. “What is that I smell?,” a voice thunders out of the cave. The ground shakes with the footsteps as the giant creature walks out of the cave.", 
+            "“What do you want, stranger,” the giant creature asks. “A key? I will tell you where it is if you can beat me at a game.”"
+            
+        ],
+        "3" : [
+            "As you defeat the giant monster, he sits quietly next to the fire. He muses, “You know, fire can hurt you or it can cook your food for you. It can help or heal, depending on how you use it.”",
+            "He looks at you for a few seconds. “Continue on the path, stranger,” he says, “at the top, the biggest challenge of all is waiting for you.”",
+            "As you hike up the mountain, you get a glimpse of the top. You wonder, “Is there fire endlessly coming out of the mountain?”",
+            "As you take another step up, a frightful enemy turns around and says, “No. No, there's not.”"
+        ],
+        "4" : [
+            "“What is your name, stranger?” You tell him your name. “I will remember that name. Few make it past Drako below. Fewer skill consider his wisdom. See, it is not in knowing that we find results, but in applying, in doing. You worked hard here and deserve the reward for your labor. I think you will find out what that is soon enough.”",
+            "He hands you a key. “Know that this key represents a lot more than our challenge here today. It represents the endurance and determination it took for you to get here. Go well and be strong, for stronger enemies await in the future and you will need more grit, more determination to endure and succeed. Remember, success is always the result of endurance, not luck or talent.”"
+        ]
+    },
+    "conclusion" : [
+        "You have defeated all the bosses and you find yourself back at the door. You could have known that there were paths here, but they are gone. As you feel around, you notice that you have all four keys needed to open the door. You unlock each individual lock and the door opens. You peer through the door, but it doesn’t lead anywhere. All you see is the grass on the other side. ",
+        "You feel angry for a moment, thinking, “What was the point of all this? I worked so hard to open the door and there is nothing there! ",
+        "One-by-one, each of the monsters fought begin gathering around you. You look at them and ask, “Why? What was the point of all this?” ",
+        "The queen hops forward, smiles at you and says, “You were, stranger. You are the purpose, the reason.” ",
+        "You wake up the next morning, thinking, “What a strange dream!”",
+        "As you head to school, your mind remembers the slightly-scary math-monsters you encountered the night before.",
+        "“Were they enemies or friends?”",
+        "You sit in math class, thinking it to be just another day. But everything makes much more sense now.",
+        "Though it all felt like a dream, you find out that you are now…",
+        "…pretty good at math!",
+        "You look out the school window at the world outside, thinking to yourself, “I guess that if I could do math, I can do anything!”",
+        "Your mind drifts to the future...",
+        "“I wonder what future monster-friends are waiting for me!” "
+    ]
+}
