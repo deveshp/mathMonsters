@@ -2,7 +2,9 @@
   "name": "math-monsters",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://rhman101.github.io/mathMonsters/",
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -15,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
