@@ -71,7 +71,7 @@ class GamePage extends Component {
     }))
   }
 
-  clearSetTimeout= () => {
+  clearSetTimeout = () => {
     clearTimeout(this.timeOutCount);
     this.timeOutCount = setTimeout(() => this.setState(() => ({
       attempted: true,

@@ -4,15 +4,15 @@ const additionFunction = (difficulty = 'easy') => {
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
         seconds = 10;
-        numberOfQuestions = 5; //60
+        numberOfQuestions = 60; //60
         hitPoints = 30;
     } else if (difficulty === 'medium') {
         seconds = 8;
-        numberOfQuestions = 5; //80
+        numberOfQuestions = 80; //80
         hitPoints = 24;
     } else {
         seconds = 7;
-        numberOfQuestions = 5; //100
+        numberOfQuestions = 100; //100
         hitPoints = 20; 
     }
     return {
@@ -29,16 +29,16 @@ const subtractionFunction = (difficulty = 'easy') => {
     let varTwo = (Math.floor((Math.random() * 12) + 1) + varOne);
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
-        seconds = 12;
-        numberOfQuestions = 5; //50
+        seconds = 15;
+        numberOfQuestions = 50; //50
         hitPoints = 25;
     } else if (difficulty === 'medium') {
-        seconds = 11;
-        numberOfQuestions = 5; //65
+        seconds = 13;
+        numberOfQuestions = 65; //65
         hitPoints = 25;
     } else {
         seconds = 10; 
-        numberOfQuestions = 5; //100 
+        numberOfQuestions = 100; //100 
         hitPoints = 20;
     }
     return {
@@ -56,15 +56,15 @@ const multiplicationFunction = (difficulty = 'seconds') => {
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
         seconds = 10;
-        numberOfQuestions = 5; //60
+        numberOfQuestions = 60; //60
         hitPoints = 30;
     } else if (difficulty === 'medium') {
         seconds = 9;
-        numberOfQuestions = 5; //80
+        numberOfQuestions = 80; //80
         hitPoints = 25;
     } else {
         seconds = 8; 
-        numberOfQuestions = 5; //100
+        numberOfQuestions = 100; //100
         hitPoints = 20;
     }
     return {
@@ -82,15 +82,15 @@ const divisionFunction = (difficulty = 'easy') => {
     let seconds, numberOfQuestions, hitPoints;
     if (difficulty === 'easy') {
         seconds = 13;
-        numberOfQuestions = 5; //50
+        numberOfQuestions = 50; //50
         hitPoints = 20;
     } else if (difficulty === 'medium') {
         seconds = 12;
-        numberOfQuestions = 5; //60
+        numberOfQuestions = 60; //60
         hitPoints = 25
     } else {
         seconds = 11;
-        numberOfQuestions = 5; //80
+        numberOfQuestions = 80; //80
         hitPoints = 16;
     }
     return {
