@@ -1,0 +1,68 @@
+.mainGamePage {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #monsterPicWrapper {
+    width: 100%
+} */
+
+#mathBox { /* To be deleted */
+    border: 2px solid black;
+    height: 150px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@keyframes boxHeight {
+    from {height: 120px;}
+    to {height: 0px;}
+}
+
+@keyframes boxHeightTwo {
+    from {height: 119px;}
+    to {height: 1px;}
+}
+
+.timeOutBar {
+    width: 50px;
+    border: 1px transparent black;
+    display: block;
+    background-color: green;
+}
+
+.timeOutBar-B {
+    width: 50px;
+    height: 120px;
+    border: 1px transparent black;
+    display: block;
+    background-color: green;
+    transition: height 0s;
+}
+
+.timeOutBar_during {
+    background-color:purple;
+    height: 20px;
+}
+
+#timeOutBorder {
+    border: 2px solid black;
+    width: 50px;
+    height: 120px;
+    float: right;
+    margin: 15px;
+}
+
+#questionText { /* To be deleted */
+    float: left;
+    margin-left: 20px;
+}
+
+#answerInput { /* To be deleted */
+    float:left;
+    margin-left: 20px;
+}

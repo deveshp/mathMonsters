@@ -1,28 +1,36 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React/*, { Component }*/ from 'react';
+import { /*BrowserRouter, */Route, Switch } from 'react-router-dom';
 import './App.css';
+  // Emma requested that we create a separate branch for the css, which makes sense.
+// import './App.css'; 
+// import configureStore from './store/configureStore';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import * as routes from './constants/routes';
+import DashboardPage from './components/DashboardPage';
+import GamePage from './components/GamePage/index';
+import GameSetupPage from './components/GameSetupPage';
+import LandingPage from './components/LandingPage';
+import NotFoundPage from './components/NotFoundPage';
+
+// I assume we won't need these for production, so I will put them here for removal later.
+// import {
+//   additionComplete,
+//   subtractionComplete,
+//   multiplicationComplete,
+//   divisionComplete,
+// } from './actions/achievementsActions';
+// import { characterChoice } from './actions/gameStateActions';
+
+const App = () => (
+  <div className="App">
+    <Switch>
+      <Route path={routes.LANDING} exact component={LandingPage} />
+      <Route path={routes.DASHBOARD} component={DashboardPage} />
+      <Route path={routes.GAME} component={GamePage} />
+      <Route path={routes.GAME_SETUP} component={GameSetupPage} />
+      <Route component={NotFoundPage} />
+    </Switch>
+  </div>
+);
 
 export default App;
